@@ -1,0 +1,26 @@
+#+TITLE: Coq のプラグイン
+
+* コマンドを作る
+
+  #+BEGIN_SRC ocaml
+    VERNAC COMMAND EXTEND hoge
+      | ... -> ...
+    END
+  #+END_SRC
+  という形式で定義して色々やるみたい。
+
+  =ssreflect.ml4= を見ると参考になる？
+
+* パーサを追加する
+
+  =Notation= モジュールにある
+  - =declare_numeral_interpreter=
+  - =declare_string_interpreter=
+  の二つの関数を使うことで、数字と文字列のパーサを登録できる。
+
+  Coq の項とトークンの間で双方向の変換関数を用意することになる。
+  また、パーシングをするときのスコープも要る。
+  例えば =nat= のパーシングは =nat_scope= 下で行なわれることになっている。
+
+  より一般的な =declare_prim_token_interpreter= もある。
+
