@@ -5,9 +5,6 @@ Unset Strict Implicit.
 
 Require Import Arith.
 
-(* 3-ary nat *)
-
-
 Delimit Scope nat3_scope with nat3.
 
 Module Nat3.

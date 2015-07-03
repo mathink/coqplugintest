@@ -115,8 +115,7 @@ endif
 #                    #
 ######################
 
-VFILES:=theories/Tri.v\
-  theories/Nat.v
+VFILES:=theories/Tri.v
 
 -include $(addsuffix .d,$(VFILES))
 .SECONDARY: $(addsuffix .d,$(VFILES))
@@ -129,15 +128,12 @@ GFILES:=$(VFILES:.v=.g)
 HTMLFILES:=$(VFILES:.v=.html)
 GHTMLFILES:=$(VFILES:.v=.g.html)
 MLFILES:=src/nat3_interp_plugin_mod.ml\
-  src/nat3_interp.ml\
-  src/nat_interp_plugin_mod.ml\
-  src/nat_interp.ml
+  src/nat3_interp.ml
 
 -include $(addsuffix .d,$(MLFILES))
 .SECONDARY: $(addsuffix .d,$(MLFILES))
 
-MLLIBFILES:=src/nat3_interp_plugin.mllib\
-  src/nat_interp_plugin.mllib
+MLLIBFILES:=src/nat3_interp_plugin.mllib
 
 -include $(addsuffix .d,$(MLLIBFILES))
 .SECONDARY: $(addsuffix .d,$(MLLIBFILES))
