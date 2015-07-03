@@ -1,0 +1,17 @@
+.*
+!.gitignore
+*.a
+*.cma
+*.cmi
+*.cmo
+*.cmt
+*.cmx
+*.cmxa
+*.cmxs
+*.glob
+*.mllib.d
+*.ml.d
+*.o
+*.vo
+*.v.d
+*.bak
