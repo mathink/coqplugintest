@@ -1,9 +1,7 @@
 -I src
--R theories TESTLIB
-
 src/nat3_interp.ml
 src/nat3_interp_plugin_mod.ml
 src/nat3_interp_plugin.mllib
 
+-R theories TESTLIB
 theories/Tri.v
-
